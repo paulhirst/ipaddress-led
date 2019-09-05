@@ -1,0 +1,12 @@
+[Unit]
+Description=LED IP address blinker
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /root/led.py > /root/led.log 2>&1
+
+[Install]
+WantedBy=multi-user.target
+
+
